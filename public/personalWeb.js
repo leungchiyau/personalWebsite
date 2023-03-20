@@ -27,18 +27,31 @@ let hiddenWords2 = document.querySelector('.hiddenWords2')
 let hiddenWords3 = document.querySelector('.hiddenWords3')
 let hiddenWords4 = document.querySelector('.hiddenWords4')
 
+
+let types = new Typed('.multi-text', {
+    strings: ['Web Developer', 'Fullstack Developer', 'Programmer'],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true
+})
+
 function openDialog(buttonClassName, dialogName) {
     buttonClassName.addEventListener('click', (event) => {
         dialogName.open = true
+        dialogName.className='boxZoneInAnimation'
     })
 }
 
-function closeDialog(buttonClassName) {
+function closeDialog(buttonClassName, dialogName) {
     for (let classNames of buttonClassName) {
         classNames.addEventListener('click', (event) => {
-            portfolioDialog.open = false
-            aboutMeDialog.open = false
-            getInTouch.open = false
+            setTimeout(()=>{
+                portfolioDialog.open = false
+                aboutMeDialog.open = false
+                getInTouch.open = false
+            },1000)
+            dialogName.className = 'boxZoneOutAnimation'
         })
     }
 }
@@ -50,12 +63,6 @@ closeYoutubeButton.addEventListener('click', (event) => {
 detailBox2.addEventListener('mouseover', (event) => {
     secondWord2.className = 'green'
     firstWord2.className = 'while'
-    secondWord2.classList.toggle('animate__animated')
-    secondWord2.classList.toggle('animate__zoomOutDown')
-    setTimeout(() => {
-        secondWord2.classList.remove('animate__animated')
-        secondWord2.classList.remove('animate__zoomOutDown')
-    }, 3000)
 })
 
 detailBox2.addEventListener('mouseout', (event) => {
@@ -111,7 +118,9 @@ openDialog(detailBox2, aboutMeDialog);
 openDialog(detailBox3, portfolioDialog);
 openDialog(detailBox4, getInTouch);
 openDialog(youtubeVideo, playYoutube);
-closeDialog(closeButton);
+closeDialog(closeButton , aboutMeDialog);
+closeDialog(closeButton , portfolioDialog);
+closeDialog(closeButton , getInTouch);
 addAnimatePortfolio(youtubeVideo, hiddenWords, picture1);
 addAnimatePortfolio(imageProject, hiddenWords2, picture2);
 addAnimatePortfolio(sliderProject, hiddenWords3, picture4);

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="personalWeb.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <dialog id="aboutMeDialog">
+        <button class="closeButton">x</button>
+        <div id="aboutMe">ABOUT <span id="me">ME</span></div>
+        <div class="container-fluid">
+            <div class="col-md-3"></div>
+            <div class="col-md-9"></div>
+        </div>
+        <div class="line">
+            <div class="underline"></div>
+            <i class="fa-regular fa-address-book"></i>
+            <div class="underline"></div>
+        </div>
+        <div id="personalInfo">
+            <img class="aboutMePersonalImg" src="personal.jpg">
+            <div>
+                <div id="personalInfotopic">PERSONAL INFO</div>
+                <div id="personalInfodetail">
+                    I'm a Freelance Web Designer & Developer based in Moscow, Russia. I have serious passion for UI
+                    effects, animations and creating intuitive, with over a decade of experience.
+                </div>
+                <div id="personalInfoAboutMe">
+                    <div class="col-md-6 col-sm-12">
+                        <p>First Name: Linda</p>
+                        <p>Last Name: Smith</p>
+                        <p>Date of birth: 21 june 1990</p>
+                        <p>Nationality: Russian</p>
+                        <p>Freelance: Available</p>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <p>Phone: +34 21 18 40 10</p>
+                        <p>Address: Moscow, Russia</p>
+                        <p>Email: you@yourwebsite.com</p>
+                        <p>Spoken Langages: French - German</p>
+                        <p>Skype: linda.smith</p>
+                    </div>
+                </div>
+                <div id="personalButton">
+                    <button class="col-sm-5 col-xs-12 dwonloadButton">DOWNLOAD RESUME</button>
+                    <button class="col-sm-3 col-xs-12 blogButton">MY BLOG</button>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="playYoutube">
+        <button class="closeYoutubeButton">x</button>
+        <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
+        </iframe>
+    </dialog>
+
+    <dialog id="portfolioDialog">
+        <button class="closeButton">x</button>
+        <div id="aboutMe">MY <span id="me">PORTFOLIO</span></div>
+        <div class="container-fluid">
+            <div class="col-md-3"></div>
+            <div class="col-md-9"></div>
+        </div>
+        <div class="line">
+            <div class="underline"></div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-person-lines-fill underlineImg" viewBox="0 0 16 16">
+                <path
+                    d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" />
+            </svg>
+            <div class="underline"></div>
+        </div>
+        <div>
+            <div id="portfolioItemList">
+                <button class="col-sm-4 col-xs-12 portfolioItem" id="youtubeVideo">
+                    <div class="hiddenWords1"><span class="boxesWords">YOUTUBE VIDEO</span></div>
+                    <img id="picture1" src="picture1.jpg">
+                </button>
+                <button class="col-sm-4 col-xs-12 portfolioItem" id="imageProject">
+                    <div class="hiddenWords2"><span class="boxesWords">IMAGE PROJECT</span></div>
+                    <img src="picture2.jpg">
+                </button>
+                <button class="col-sm-4 col-xs-12 portfolioItem" id="sliderProject">
+                    <div class="hiddenWords3"><span class="boxesWords">SLIDER PROJECT</span></div>
+                    <img src="picture3.jpg">
+                </button>
+                <button class="col-sm-4 col-xs-12 portfolioItem" id="localVideo">
+                    <div class="hiddenWords4"><span class="boxesWords">LOCAL VIDEO</span></div>
+                    <img src="picture4.jpg">
+                </button>
+            </div>
+        </div>
+        </div>
+    </dialog>
+
+
+    <dialog id="getInTouch">
+        <button class="closeButton">x</button>
+        <div id="aboutMe">GET <span id="me">IN TOUCH</span></div>
+        <div class="container-fluid">
+            <div class="col-md-3"></div>
+            <div class="col-md-9"></div>
+        </div>
+        <div class="line">
+            <div class="underline"></div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-person-lines-fill underlineImg" viewBox="0 0 16 16">
+                <path
+                    d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" />
+            </svg>
+            <div class="underline"></div>
+        </div>
+
+        <div>
+            <div class="col-sm-8 messageBox">
+                <h4>Feel free to drop me a line</h4>
+                <p>
+                    If you have any suggestion, project or even you want to say Hello.. Please fill out the form below
+                    and I will reply you shortly.
+                </p>
+                <div id="inputName">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" />
+                    </svg>
+                    <input type="text" placeholder="Your Name">
+                </div>
+                <div id="inputEmail">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-envelope-fill contactBoxSvg" viewBox="0 0 16 16">
+                        <path
+                            d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                    </svg>
+                    <input type="text" placeholder="Your Email">
+                </div>
+                <div id="inputComment">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-chat-right-dots" viewBox="0 0 16 16">
+                        <path
+                            d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z" />
+                        <path
+                            d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                    </svg>
+                    <input type="text" placeholder="Your Comment">
+                </div>
+                <button id="sendMessage">SEND MESSAGE</button>
+            </div>
+        </div>
+
+    </dialog>
+
+
+    <div class="container-fluid" id="outerLayer">
+        <div class="personalPicture col-md-3" id="inlineLayer1">
+            <img src="personal.jpg">
+            <div>
+                <div class="contactBox">
+                    <p class="contactBoxTopic">PHONE</p>
+                    <div class="contactBoxContext">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-telephone-fill contactBoxSvg" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                        </svg>
+                        <div>5541 4705</div>
+                    </div>
+                    <p class="contactBoxTopic">Email</p>
+                    <div class="contactBoxContext">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-envelope-fill contactBoxSvg" viewBox="0 0 16 16">
+                            <path
+                                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                        </svg>
+                        <div>freeleague2032@gmail.com</div>
+                    </div>
+                    <p class="contactBoxTopic">Skype</p>
+                    <div class="contactBoxContext">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-skype contactBoxSvg" viewBox="0 0 16 16">
+                            <path
+                                d="M4.671 0c.88 0 1.733.247 2.468.702a7.423 7.423 0 0 1 6.02 2.118 7.372 7.372 0 0 1 2.167 5.215c0 .344-.024.687-.072 1.026a4.662 4.662 0 0 1 .6 2.281 4.645 4.645 0 0 1-1.37 3.294A4.673 4.673 0 0 1 11.18 16c-.84 0-1.658-.226-2.37-.644a7.423 7.423 0 0 1-6.114-2.107A7.374 7.374 0 0 1 .529 8.035c0-.363.026-.724.08-1.081a4.644 4.644 0 0 1 .76-5.59A4.68 4.68 0 0 1 4.67 0zm.447 7.01c.18.309.43.572.729.769a7.07 7.07 0 0 0 1.257.653c.492.205.873.38 1.145.523.229.112.437.264.615.448.135.142.21.331.21.528a.872.872 0 0 1-.335.723c-.291.196-.64.289-.99.264a2.618 2.618 0 0 1-1.048-.206 11.44 11.44 0 0 1-.532-.253 1.284 1.284 0 0 0-.587-.15.717.717 0 0 0-.501.176.63.63 0 0 0-.195.491.796.796 0 0 0 .148.482 1.2 1.2 0 0 0 .456.354 5.113 5.113 0 0 0 2.212.419 4.554 4.554 0 0 0 1.624-.265 2.296 2.296 0 0 0 1.08-.801c.267-.39.402-.855.386-1.327a2.09 2.09 0 0 0-.279-1.101 2.53 2.53 0 0 0-.772-.792A7.198 7.198 0 0 0 8.486 7.3a1.05 1.05 0 0 0-.145-.058 18.182 18.182 0 0 1-1.013-.447 1.827 1.827 0 0 1-.54-.387.727.727 0 0 1-.2-.508.805.805 0 0 1 .385-.723 1.76 1.76 0 0 1 .968-.247c.26-.003.52.03.772.096.274.079.542.177.802.293.105.049.22.075.336.076a.6.6 0 0 0 .453-.19.69.69 0 0 0 .18-.496.717.717 0 0 0-.17-.476 1.374 1.374 0 0 0-.556-.354 3.69 3.69 0 0 0-.708-.183 5.963 5.963 0 0 0-1.022-.078 4.53 4.53 0 0 0-1.536.258 2.71 2.71 0 0 0-1.174.784 1.91 1.91 0 0 0-.45 1.287c-.01.37.076.736.25 1.063z" />
+                        </svg>
+                        <div>linda.smith</div>
+                    </div>
+                    <p class="contactBoxTopic">Address</p>
+                    <div class="contactBoxContext">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-house-door contactBoxSvg" viewBox="0 0 16 16">
+                            <path
+                                d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z" />
+                        </svg>
+                        <div> Moscow, Russia</div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9" id="inlineLayer2">
+            <p class="row">
+                <button class="col-sm-6 col-xs-12">
+                    <div class="detailBox1">
+                        <p>HI THERE ! I'M</p>
+                        <p>PAUL YAU</p>
+                        <p class="multi-text">WEB DEVELOPER</p>
+                    </div>
+                </button>
+                <button class="col-sm-6 col-xs-12">
+                    <div class="detailBox2">
+                        <!-- <div class="inlineBox"> -->
+                            <div class="firstWord2">ABOUT&ensp;</div> <div class="secondWord2">ME</div>
+                        <!-- </div> -->
+                    </div>
+                </button>
+            </p>
+            <p class="row">
+                <button class="col-sm-6 col-xs-12">
+                    <div class="detailBox3">
+                        <!-- <div> -->
+                            <div class="firstWord3">MY&ensp;</div> <div class="secondWord3">PORTFOLIO</div>
+                        <!-- </div> -->
+                    </div>
+                </button>
+                <button class="col-sm-6 col-xs-12">
+                    <div class="detailBox4">
+                        <div class="firstWord4">GET&ensp;</div> <div class="secondWord4">IN TOUCH</div>
+                    </div>
+                </button>
+            </p>
+        </div>
+    </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script src="personalWeb.js"></script>
+    </body>
+
+</html>

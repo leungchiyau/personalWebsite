@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="backgroundImage">
+        <div class="page">
+            <div class="pageContent">
+                <header>
+                    <div class="headerPhoto">
+                        <img src="./picture/professor.jpg">
+                    </div>
+                    <div class='headerTitle'>
+                        <h2>Paul Yau</h1>
+                            <h4>Web developer</h1>
+                    </div>
+                    <div class="socialLink">
+                        <a href="index.html" class="socialType" id="linkedin"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="index.html" class="socialType" id="facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="index.html" class="socialType" id="twitter"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                    <div class="downloadCVButton">
+                        <button>Download CV</button>
+                    </div>
+                </header>
+                <div class="mainContent">
+                    <div class="introBox">
+                        <div>
+                            <p>HI THERE ! I'M</p>
+                            <p>PAUL YAU</p>
+                            <p><span></span><span class="multi-text"></span></p>
+                        </div>
+                    </div>
+                    <button class="aboutMe">
+                        <div class="firstWord2">ABOUT&ensp;</div>
+                        <div class="secondWord2">ME</div>
+                    </button>
+                    <button class=" portfolio">
+                        <div class="firstWord3">MY&ensp;</div>
+                        <div class="secondWord3">PORTFOLIO</div>
+                    </button>
+                    <button class="getInTouch">
+                        <div class="firstWord4">GET&ensp;</div>
+                        <div class="secondWord4">IN TOUCH</div>
+                    </button>
+                    <dialog id="aboutMeDialog">
+                        <button class="closeButton">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <div id="aboutMe">ABOUT <span id="me">ME</span></div>
+                        <div class="line">
+                            <div class="underline"></div>
+                            <i class="fa-regular fa-address-book"></i>
+                            <div class="underline"></div>
+                        </div>
+                        <div class="aboutMeContent">
+                            <div id="personalInfotopic">PERSONAL INFO</div>
+                            <div id="personalInfodetail">
+                                I was graduated from Tecky Academy. In Tecky Academy, I had finished
+                                four projects in tecky academy. Although, it is a few experiences, but that
+                                makes me confirm that I am interested in coding and I will spend more time
+                                to learn coding.
+                            </div>
+                            <div id="personalInfoAboutMe">
+                                <div>
+                                    <p>First Name: Chi Leung</p>
+                                    <p>Last Name: Yau </p>
+                                    <!-- <p>Date of birth: 21 june 1990</p> -->
+                                    <p>Nationality: chinese </p>
+                                    <p>Freelance: Available</p>
+                                </div>
+                                <div>
+                                    <p>Phone: 55414705 </p>
+                                    <!-- <p>Address: Moscow, Russia</p> -->
+                                    <p>Email: paulyau2023@gmail.com</p>
+                                    <p>Spoken Langages: Cantonese, English</p>
+                                    <p>Skype: linda.smith</p>
+                                </div>
+                            </div>
+                            <div id="personalButton">
+                                <button class="downloadButton">
+                                    DOWNLOAD RESUME
+                                    <span><i class="fa-solid fa-file"></i></span>
+                                </button>
+                                <button class="blogButton">MY BLOG
+                                    <span><i class="fa-solid fa-file-pen"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="personalEX">
+                            <div class="personalEXType">
+                                <div class="clickPersonalEXTypeBox" id="Experience"><span
+                                        class="personalEXTypeBoxImg"><i
+                                            class="fa-solid fa-briefcase"></i></span>EXPERIENCE</div>
+                                <div class="personalEXTypeBox" id="Education"><span class="personalEXTypeBoxImg"><i
+                                            class="fa-solid fa-school"></i></span>EDUCATION</div>
+                                <div class="personalEXTypeBox" id="Skill"><span class="personalEXTypeBoxImg"><i
+                                            class="fa-solid fa-computer"></i></span>SKILL</div>
+                            </div>
+                            <div class="personalEXContent">
+
+                                <div class="TopBox" id="experienceContent">
+                                    <div class="personalEXContentTopic"><span class="personalEXTypeBoxImg"><i
+                                                class="fa-solid fa-briefcase"></i></span>EXPERIENCE</div>
+                                    <div class="experienceContentBox">
+                                        <div>C & R HOLDINGS LIMITED</div>
+                                        <div>Position : Software Developer</div>
+                                        <div><span><i
+                                                    class="fa-solid fa-calendar-days"></i></span>09/2022&ensp;-&ensp;01/2023
+                                        </div>
+                                        <p>I am responsible a AI model that is recognized some receipt. My jobs is
+                                            writing regular expression in wordpress to label the invoice,date and
+                                            amount in the receipt</p>
+                                        <div class="experienceContentBoxEnd"></div>
+                                    </div>
+                                </div>
+
+                                <div class="mediaBox" id="educationContent">
+                                    <div class="personalEXContentTopic"><span class="personalEXTypeBoxImg"><i
+                                                class="fa-solid fa-school"></i></span>EDUCATION</div>
+                                    <div class="educationContentBox">
+                                        <div>TECKY ACADEMY</div>
+                                        <div><span><i
+                                                    class="fa-solid fa-calendar-days"></i></span>03/2022&ensp;-&ensp;07/2022
+                                        </div>
+                                        <p>Completed MicroMaster in A.I and Programming, The course focus on:</p>
+                                        <ul>
+                                            <li>JavaScript, HTML, CSS Fundamentals</li>
+                                            <li>Python, Web Scraping Fundamentals</li>
+                                            <li>Web Fundamentals in JavaScript</li>
+                                            <li>Web Server Programming</li>
+                                            <li>Backend & AI Development</li>
+                                            <li>Frontend Development</li>
+                                        </ul>
+                                        <div class="experienceContentBoxEnd"></div>
+                                    </div>
+                                </div>
+
+                                <div class="endBox" id="skillContent">
+                                    <div class="personalEXContentTopic"><span class="personalEXTypeBoxImg"><i
+                                                class="fa-solid fa-computer"></i></span>SKILL</div>
+                                    <div class="skillContentBox">
+
+                                        <div><span>Languages</span>
+                                            <ul>
+                                                <li>JavaScript</li>
+                                                <li>TypeScript</li>
+                                                <li>Python</li>
+                                                <li>HTML 5</li>
+                                                <li>CSS 3</li>
+                                            </ul>
+                                        </div>
+                                        <div><span>Frameworks</span>
+                                            <ul>
+                                                <li>NodeJS</li>
+                                                <li>React.js</li>
+                                                <li>Express.js</li>
+                                                <li>Bootstrap</li>
+                                                <li>P5.js</li>
+                                                <li>Ionoc</li>
+                                            </ul>
+                                        </div>
+                                        <div><span>Tools</span>
+                                            <ul>
+                                                <li>JQuery</li>
+                                                <li>Git</li>
+                                                <li>Selenium</li>
+                                                <li>Jest</li>
+                                                <li>Socket IO</li>
+                                                <li>AWS</li>
+                                                <li>Docker</li>
+                                                <li>Tensorflow</li>
+                                                <li>CI CD</li>
+                                            </ul>
+                                        </div>
+                                        <div>Database
+                                            <ul>
+                                                <li>SQL (PostgreSQL)</li>
+                                                <li>REST APIs</li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </dialog>
+
+                    <dialog id="portfolioDialog">
+                        <button class="closeButton">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <div id="aboutMe">MY <span id="me">PORTFOLIO</span></div>
+                        <div class="line">
+                            <div class="underline"></div>
+                            <i class="fa-regular fa-address-book"></i>
+                            <div class="underline"></div>
+                        </div>
+
+                        <div class="portfolioContent">
+                            <div class="myProject" id="gameOfLife">
+                                <img src="./picture/picture4.jpg">
+                                <div class="coverBox" id="myProjectCoverBox">GAME OF LIFE</div>
+                            </div>
+                            <div class="youtubeVideo" id="caloriesWeb">
+                                <img src="./picture/picture2.jpg">
+                                <div class="coverBox" id="youtubeVideoCoverBox">Calories Website</div>
+                            </div>
+                            <div class="localVideo" id="aiProject">
+                                <img src="./picture/picture3.jpg">
+                                <div class="coverBox" id="localVideoCoverBox">AI PROJECT</div>
+                            </div>
+                            <div class="comingSoon" id="caloriesApp">
+                                <img src="./picture/picture1.jpg">
+                                <div class="coverBox" id="comingSoonCoverBox">CALORIES APP</div>
+                            </div>
+                        </div>
+                    </dialog>
+
+                    <dialog id="getInTouchDialog">
+                        <button class="closeButton">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <div id="aboutMe">GET <span id="me">IN TOUCH</span></div>
+                        <div class="line">
+                            <div class="underline"></div>
+                            <i class="fa-regular fa-address-book"></i>
+                            <div class="underline"></div>
+                        </div>
+
+                        <div class="getInTouchContent">
+                            <div class="personalContact">
+                                <div class="contactBox">
+                                    <div>
+                                        <div class="personalContactImg"><i class="fa-solid fa-phone"></i></div>
+                                        <div class="personalContactWord">5541-4705</div>
+                                    </div>
+                                </div>
+                                <div class="contactBox">
+                                    <div>
+                                        <div class="personalContactImg"><i class="fa-solid fa-envelope"></i></div>
+                                        <div class="personalContactWord">paulyau2023@gmail.com</div>
+                                    </div>
+                                </div>
+                                <div class="contactBox">
+                                    <div>
+                                        <div class="personalContactImg"><i
+                                                class="fa-sharp fa-regular fa-circle-check"></i></div>
+                                        <div class="personalContactWord">Freelance Available</div>
+                                    </div>
+                                </div>
+                                <div class="contactBox">
+                                    <div>
+                                        <div class="personalContactImg"><i class="fa-solid fa-calendar-days"></i></div>
+                                        <div class="personalContactWord">Availability Immediate</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="messageBox">
+                                <h2>HOW CAN I <span>HELP YOU?</span></h2>
+                                <div class="comments">
+                                    <div class="commentsPeople">
+                                        <input type="text" placeholder="Full Name">
+                                        <input type="text" placeholder="Email Address">
+                                        <input type="text" placeholder="Subject">
+                                    </div>
+                                    <div class="commentsMessage">
+                                        <textarea name="message" rows="7" placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="sendMessage">Send Message</div>
+                                </div>
+                            </div>
+                        </div>
+                    </dialog>
+
+                    <dialog id="gameOfLifeDialog">
+                        <button class="portfolioCloseButton">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <div class='btnBox'>
+                            <div class="leftBtn">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+                            <div class="rightBtn">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <h2 class="dialogTopic">GAME OF LIFE</h2>
+                        <div class="gameOfLifeContent">
+                            <div class="portfolioPicture">
+                                <img class="pictureActive" src="./picture/gameOfLife.jpg" id="gameOfLifePicture1">
+                                <img class="pictureNotActive" src="./picture/gameOfLifePage.jpg"
+                                    id="gameOfLifePicture2">
+                                <div class="pictureChoose">
+                                    <div class="chooseBox chooseBoxActive" id="gameOfLifeChooseBox1"></div>
+                                    <div class="chooseBox" id="gameOfLifeChooseBox2"></div>
+                                </div>
+                            </div>
+                            <div class="portfolioDescription">
+                                <div class="descriptionContent">
+                                    <h3>Description</h3>
+                                    <p class="descriptionDetail">
+                                        <i class="fa-solid fa-user"></i>
+                                        Paul Yau
+                                    </p>
+                                    <p class="descriptionDetail">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        15 february, 2022
+                                    </p>
+                                    <p class="descriptionMain">This project used javascript, P5, bootstrap to finish a
+                                        famous
+                                        game 'Game of life'. I design two mode in my own 'GAME OF
+                                        LIFE' , normal mode and plague mode, plague can push
+                                        plague in canvas and make neighbor to no life.
+                                    </p>
+                                    <h3>Technology</h3>
+                                    <div class="technology">
+                                        <div class="technologyBoxes">HTML5</div>
+                                        <div class="technologyBoxes">CSS3</div>
+                                        <div class="technologyBoxes">JQuery</div>
+                                        <div class="technologyBoxes">P5.js</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </dialog>
+
+                    <dialog id="caloriesWebDialog">
+                        <button class="portfolioCloseButton">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <div class='btnBox'>
+                            <div class="leftBtn">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+                            <div class="rightBtn">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <h2 class="dialogTopic">CALORIES WEBSITE</h2>
+                        <div class="gameOfLifeContent">
+                            <div class="portfolioPicture">
+                                <img class="pictureActive" src="./picture/carloriesWebMainPage.jpg"
+                                    id="carloriesWebPicture1">
+                                <img class="pictureNotActive" src="./picture/carloriesWebProfile.jpg"
+                                    id="carloriesWebPicture2">
+                                <img class="pictureNotActive" src="./picture/carloriesWebrecommed.jpg"
+                                    id="carloriesWebPicture3">
+                                <img class="pictureNotActive" src="./picture/carloriesWebRecord.jpg"
+                                    id="carloriesWebPicture4">
+                                <div class="pictureChoose">
+                                    <div class="chooseBox chooseBoxActive" id="carloriesWebChooseBox1"></div>
+                                    <div class="chooseBox" id="carloriesWebChooseBox2"></div>
+                                    <div class="chooseBox" id="carloriesWebChooseBox3"></div>
+                                    <div class="chooseBox" id="carloriesWebChooseBox4"></div>
+                                </div>
+                            </div>
+                            <div class="portfolioDescription">
+                                <div class="descriptionContent">
+                                    <h3>Description</h3>
+                                    <p class="descriptionDetail">
+                                        <i class="fa-solid fa-user"></i>
+                                        Paul Yau, Trevor, Henry
+                                    </p>
+                                    <p class="descriptionDetail">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        15 march, 2022
+                                    </p>
+                                    <p class="descriptionMain">The purpose of this app is for people who
+                                        wants to become fitness or jacked to record
+                                        their daily calories.
+                                        <br>User can record their age, weigth, height,diet,exercise etc..The website
+                                        will
+                                        help them calculate their remaining calories
+                                        <br>According to user BMI, the website will suggest
+                                        the ideal weight.The website will also show user monthly weight
+                                        change.
+
+                                    </p>
+                                    <h3>Technology</h3>
+                                    <div class="technology">
+                                        <div class="technologyBoxes">HTML5</div>
+                                        <div class="technologyBoxes">CSS3</div>
+                                        <div class="technologyBoxes">JQuery</div>
+                                        <div class="technologyBoxes">TypeScript</div>
+                                        <div class="technologyBoxes">Ajax</div>
+                                        <div class="technologyBoxes">Express.js</div>
+                                        <div class="technologyBoxes">PostgreSQL</div>
+                                        <div class="technologyBoxes">REST APIs</div>
+                                        <div class="technologyBoxes">Bootstrap</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </dialog>
+
+                    <dialog id="aiProjectDialog">
+                        <button class="portfolioCloseButton">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <div class='btnBox'>
+                            <div class="leftBtn">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+                            <div class="rightBtn">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <h2 class="dialogTopic">AI PROJECT</h2>
+                        <div class="gameOfLifeContent">
+                            <div class="portfolioPicture">
+                                <img class="pictureActive" src="./picture/aiProjectMainPage.jpg" id="aiProjectPicture1">
+                                <img class="pictureNotActive" src="./picture/aiProjectCoding.jpg"
+                                    id="aiProjectPicture2">
+                                <img class="pictureNotActive" src="./picture/aiProjectData.jpg" id="aiProjectPicture3">
+                                <div class="pictureChoose">
+                                    <div class="chooseBox chooseBoxActive" id="aiProjectChooseBox1"></div>
+                                    <div class="chooseBox" id="aiProjectChooseBox2"></div>
+                                    <div class="chooseBox" id="aiProjectChooseBox3"></div>
+                                </div>
+                            </div>
+                            <div class="portfolioDescription">
+                                <div class="descriptionContent">
+                                    <h3>Description</h3>
+                                    <p class="descriptionDetail">
+                                        <i class="fa-solid fa-user"></i>
+                                        Paul Yau, Trevor, Mok
+                                    </p>
+                                    <p class="descriptionDetail">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        15 April, 2022
+                                    </p>
+                                    <p class="descriptionMain">The purpose of this project is looking for a AI model
+                                        and 2 years house racing data can increase win
+                                        percentage?
+                                        <br>We use selenium wrab racing.hkjc.com two years
+                                        horse racing data
+                                        <br>This is the two years data in excel file. After taking
+                                        this data in HKJC, we will process the data to let it
+                                        has more feature and this can increase the model
+                                        accuracy rating.
+                                        <br>The AI model will predict six houses in each race. Our
+                                        website will let the AI prediction compare with real
+                                        racing result and show which is predict successful.
+
+                                    </p>
+                                    <h3>Technology</h3>
+                                    <div class="technology">
+                                        <div class="technologyBoxes">HTML5</div>
+                                        <div class="technologyBoxes">CSS3</div>
+                                        <div class="technologyBoxes">Python</div>
+                                        <div class="technologyBoxes">Tensorflow</div>
+                                        <div class="technologyBoxes">PostgreSQL</div>
+                                        <div class="technologyBoxes">REST APIs</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </dialog>
+
+                    <dialog id="caloriesAppDialog">
+                        <button class="portfolioCloseButton">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <div class='btnBox'>
+                            <div class="leftBtn">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+                            <div class="rightBtn">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <h2 class="dialogTopic">Calories App</h2>
+                        <div class="gameOfLifeContent">
+                            <div class="portfolioPicture caloriesAppPicture">
+                                <img class="pictureActive" src="./picture/carloriesAppMainPage.jpg" id="caloriesAppPicture1">
+                                <img class="pictureNotActive" src="./picture/carloriesAppPage.jpg"id="caloriesAppPicture2">
+                                <img class="pictureNotActive" src="./picture/carloriesAppDetail.jpg" id="caloriesAppPicture3">
+                                <img class="pictureNotActive" src="./picture/carloriesAppBlog.jpg" id="caloriesAppPicture4">
+                                <img class="pictureNotActive" src="./picture/carloriesAppChat.jpg" id="caloriesAppPicture5">
+                                <div class="pictureChoose">
+                                    <div class="chooseBox chooseBoxActive" id="caloriesAppChooseBox1"></div>
+                                    <div class="chooseBox" id="caloriesAppChooseBox2"></div>
+                                    <div class="chooseBox" id="caloriesAppChooseBox3"></div>
+                                    <div class="chooseBox" id="caloriesAppChooseBox4"></div>
+                                    <div class="chooseBox" id="caloriesAppChooseBox5"></div>
+                                </div>
+                            </div>
+                            <div class="portfolioDescription">
+                                <div class="descriptionContent">
+                                    <h3>Description</h3>
+                                    <p class="descriptionDetail">
+                                        <i class="fa-solid fa-user"></i>
+                                        Paul Yau, Mok, May
+                                    </p>
+                                    <p class="descriptionDetail">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        25 may, 2022
+                                    </p>
+                                    <p class="descriptionMain">The purpose of this app is for people who 
+                                        wants to become fitness or jacked to record 
+                                        their daily calories.
+                                        <br>When user login success, the app will store his 
+                                        own JWT (JSON Web Token) in localstorage .The 
+                                        app will check if user have JWD, user can use app 
+                                        function. If not, it will redirect to login page. 
+                                        <br>After login, the app will Ask user age, weight etc… 
+                                        and then will calculate how
+                                        many calories they can consume.
+                                        <br>User can also check more 
+                                        nutrition details about food. 
+                                        e.g. protein, sugar… 
+                                        <br>The app also has forum,
+                                        let user can post their 
+                                        experience to others .
+                                        <br>And this app has chit-chat function, let user 
+                                        can chat with other 
+                                        user.
+                                        
+                                    </p>
+                                    <h3>Technology</h3>
+                                    <div class="technology">
+                                        <div class="technologyBoxes">HTML5</div>
+                                        <div class="technologyBoxes">CSS3</div>
+                                        <div class="technologyBoxes">JavaScript</div>
+                                        <div class="technologyBoxes">React.js</div>
+                                        <div class="technologyBoxes">Ionoc</div>
+                                        <div class="technologyBoxes">Socket IO</div>
+                                        <div class="technologyBoxes">AWS</div>
+                                        <div class="technologyBoxes">Express.js</div>
+                                        <div class="technologyBoxes">PostgreSQL</div>
+                                        <div class="technologyBoxes">REST APIs</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </dialog>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+<script src="index.js"></script>
+
+</html>
