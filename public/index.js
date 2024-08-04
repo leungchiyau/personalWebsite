@@ -40,8 +40,8 @@ let gameOfLife = document.querySelector('#gameOfLife');
 let caloriesWeb = document.querySelector('#caloriesWeb');
 let aiProject = document.querySelector('#aiProject');
 let caloriesApp = document.querySelector('#caloriesApp');
-let leftBtn = document.querySelector('.leftBtn');
-let rightBtn = document.querySelector('.rightBtn');
+// let leftBtn = document.querySelectorAll('.leftBtn');
+// let rightBtn = document.querySelectorAll('.rightBtn');
 let gameOfLifePicture1 = document.querySelector('#gameOfLifePicture1');
 let gameOfLifePicture2 = document.querySelector('#gameOfLifePicture2');
 let gameOfLifeChooseBox1 = document.querySelector('#gameOfLifeChooseBox1');
@@ -78,7 +78,44 @@ let aiProjectPictureArrays = [aiProjectPicture1, aiProjectPicture2, aiProjectPic
 let aiProjectChooseBoxArrays = [aiProjectChooseBox1, aiProjectChooseBox2, aiProjectChooseBox3];
 let caloriesAppPictureArrays = [caloriesAppPicture1, caloriesAppPicture2, caloriesAppPicture3, caloriesAppPicture4, caloriesAppPicture5];
 let caloriesAppChooseBoxArrays = [caloriesAppChooseBox1, caloriesAppChooseBox2, caloriesAppChooseBox3, caloriesAppChooseBox4, caloriesAppChooseBox5];
+let caloriesAppZoomBig = document.querySelector('#caloriesAppZoomBig');
+let caloriesWebZoomBig = document.querySelector('#caloriesWebZoomBig');
+let aiProjectZoomBig = document.querySelector('#aiProjectZoomBig');
+let gameOfLifeZoomBig = document.querySelector('#gameOfLifeZoomBig');
+let gameOfLifeAllPicture = document.querySelector('#gameOfLifeAllPicture');
+let caloriesWebAllPicture = document.querySelector('#caloriesWebAllPicture');
+let aiProjectAllPicture = document.querySelector('#aiProjectAllPicture');
+let caloriesAppAllPicture = document.querySelector('#caloriesAppAllPicture');
+let gameOfLifeChangeDialogBtn = document.querySelector('#gameOfLifeChangeDialogBtn');
+let caloriesWebChangeDialogBtn = document.querySelector('#caloriesWebChangeDialogBtn');
+let aiProjectChangeDialogBtn = document.querySelector('#aiProjectChangeDialogBtn');
+let caloriesAppChangeDialogBtn = document.querySelector('#caloriesAppChangeDialogBtn');
+let dialogOrder = [gameOfLifeDialog, caloriesWebDialog, aiProjectDialog, caloriesAppDialog]
+let emailAddress = document.querySelector('#emailAddress');
+let fullName = document.querySelector('#fullName');
+let subject = document.querySelector('#subject');
+let message = document.querySelector('#message');
 
+sendMessage.addEventListener('click', (e)=>{
+    let fullNameValue = fullName.value;
+    let emailAddressValue = emailAddress.value;
+    let subjectValue = subject.value;
+    let messageValue = message.value;
+    if (fullNameValue == ''){
+        alert('missing full name');
+    }
+    if (emailAddressValue == '' || !emailAddressValue.endsWith('.com')){
+        alert('incorrect email address');
+    }
+    if (subjectValue == ''){
+        alert('missing Subject');
+    }
+    if (messageValue == '') {
+        alert('empty message');
+    }
+    
+    [fullName.value, subject.value, emailAddress.value, message.value] = ['', '','','']
+})
 
 let types = new Typed('.multi-text', {
     strings: ['Web Developer', 'Fullstack Developer', 'Programmer'],
@@ -105,9 +142,9 @@ downloadCVButton.addEventListener('mouseout', (e) => {
     downloadCVButton.className = 'downloadCVButton'
 })
 
-rightBtn.addEventListener('click', (e) => {
-    console.log('click')
-})
+// rightBtn.addEventListener('click', (e) => {
+//     console.log('click')
+// })
 
 function hoverSocial(socialItem) {
     socialItem.addEventListener('mouseover', (e) => {
@@ -317,6 +354,11 @@ function portfolioCloseEffect(picture, chooseBox, dialogArray, chooseBoxArray) {
             caloriesWebDialog.open = false
             aiProjectDialog.open = false
             caloriesAppDialog.open = false
+            aiProjectAllPicture.className = 'portfolioPicture'
+            caloriesAppAllPicture.className = 'portfolioPicture'
+            caloriesAppAllPicture.classList.add('caloriesAppPicture')
+            caloriesWebAllPicture.className = 'portfolioPicture'
+            gameOfLifeAllPicture.className = 'portfolioPicture'
             picture.className = 'pictureActive'
             chooseBox.className = 'chooseBox'
             chooseBox.classList.add('chooseBoxActive')
@@ -328,6 +370,77 @@ function portfolioCloseEffect(picture, chooseBox, dialogArray, chooseBoxArray) {
             }
         })
     }
+}
+
+function zoomBigEffect(picture, zoom) {
+    zoom.addEventListener('click', first);
+
+    function first(e) {
+        e.stopImmediatePropagation();
+        if (picture == caloriesAppAllPicture) picture.classList.add('caloriesAppBig')
+        picture.classList.add('big')
+        this.removeEventListener("click", first);
+        zoom.onclick = second;
+    }
+
+    function second(e) {
+        e.stopImmediatePropagation();
+        if (picture == caloriesAppAllPicture) {
+            picture.className = 'portfolioPicture'
+            picture.classList.add('caloriesAppPicture')
+        } else {
+            picture.className = 'portfolioPicture'
+        }
+        this.removeEventListener("click", second);
+        zoom.onclick = first;
+    }
+}
+
+
+function changeDialogEffect(currentDialog, num) {
+    currentDialog.addEventListener('click', (e) => {
+        if (e.target.classList[1] == 'fa-chevron-right') {
+            if (num == 3) {
+                dialogOrder[0].open = true
+                dialogOrder[0].className = 'sliderIn'
+                dialogOrder[num].className = 'sliderLeftOut'
+                setTimeout(() => {
+                    for (let dialog of dialogOrder.filter(dialogs => dialogs !== dialogOrder[0])) {
+                        dialog.open = false;
+                    }
+                }, 500)
+            } else {
+                dialogOrder[num + 1].open = true
+                dialogOrder[num + 1].className = 'sliderIn'
+                dialogOrder[num].className = 'sliderLeftOut'
+                setTimeout(() => {
+                    for (let dialog of dialogOrder.filter(dialogs => dialogs !== dialogOrder[num + 1])) {
+                        dialog.open = false;
+                    }
+                }, 500)
+            }
+        } else if (e.target.classList[1] == 'fa-chevron-left') {
+            if (num == 0) {
+                dialogOrder[3].open = true;
+                dialogOrder[3].className = 'sliderDown';
+                dialogOrder[num].className = 'sliderRightOut';
+                setTimeout(() => {
+                    for (let dialog of dialogOrder.filter(dialogs => dialogs !== dialogOrder[3])) {
+                        dialog.open = false;
+                    }
+                }, 500)
+            } else {
+                dialogOrder[num - 1].open = true;
+                dialogOrder[num - 1].className = 'sliderDown';
+                dialogOrder[num].className = 'sliderRightOut';
+                setTimeout(() => {
+                    for (let dialog of dialogOrder.filter(dialogs => dialogs !== dialogOrder[num - 1])) {
+                        dialog.open = false;
+                    }
+                }, 500)
+            }
+        }
+    })
 }
 
 hoverSocial(linkedin);
@@ -375,3 +488,11 @@ choosePictureEffect(caloriesAppPicture3, caloriesAppChooseBox3, 3, caloriesAppPi
 choosePictureEffect(caloriesAppPicture4, caloriesAppChooseBox4, 4, caloriesAppPictureArrays, caloriesAppChooseBoxArrays);
 choosePictureEffect(caloriesAppPicture5, caloriesAppChooseBox5, 5, caloriesAppPictureArrays, caloriesAppChooseBoxArrays);
 portfolioCloseEffect(caloriesAppPicture1, caloriesAppChooseBox1, caloriesAppPictureArrays, caloriesAppChooseBoxArrays);
+zoomBigEffect(gameOfLifeAllPicture, gameOfLifeZoomBig);
+zoomBigEffect(caloriesAppAllPicture, caloriesAppZoomBig);
+zoomBigEffect(aiProjectAllPicture, aiProjectZoomBig);
+zoomBigEffect(caloriesWebAllPicture, caloriesWebZoomBig);
+changeDialogEffect(gameOfLifeChangeDialogBtn, 0);
+changeDialogEffect(caloriesWebDialog, 1);
+changeDialogEffect(aiProjectDialog, 2);
+changeDialogEffect(caloriesAppDialog, 3);

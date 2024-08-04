@@ -28,9 +28,9 @@
                         <a href="index.html" class="socialType" id="facebook"><i class="fa-brands fa-facebook"></i></a>
                         <a href="index.html" class="socialType" id="twitter"><i class="fa-brands fa-twitter"></i></a>
                     </div>
-                    <div class="downloadCVButton">
+                    <form action="./downloadFile" class="downloadCVButton">
                         <button>Download CV</button>
-                    </div>
+                    </form>
                 </header>
                 <div class="mainContent">
                     <div class="introBox">
@@ -87,13 +87,17 @@
                                 </div>
                             </div>
                             <div id="personalButton">
-                                <button class="downloadButton">
-                                    DOWNLOAD RESUME
-                                    <span><i class="fa-solid fa-file"></i></span>
-                                </button>
-                                <button class="blogButton">MY BLOG
-                                    <span><i class="fa-solid fa-file-pen"></i></span>
-                                </button>
+                                <form action="./downloadFile">
+                                    <button class="downloadButton">
+                                        DOWNLOAD RESUME
+                                        <span><i class="fa-solid fa-file"></i></span>
+                                    </button>
+                                </form>
+                                <div>
+                                    <button class="blogButton">MY BLOG
+                                        <span><i class="fa-solid fa-file-pen"></i></span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                         <div class="personalEX">
@@ -107,7 +111,6 @@
                                             class="fa-solid fa-computer"></i></span>SKILL</div>
                             </div>
                             <div class="personalEXContent">
-
                                 <div class="TopBox" id="experienceContent">
                                     <div class="personalEXContentTopic"><span class="personalEXTypeBoxImg"><i
                                                 class="fa-solid fa-briefcase"></i></span>EXPERIENCE</div>
@@ -269,16 +272,16 @@
                                 <h2>HOW CAN I <span>HELP YOU?</span></h2>
                                 <div class="comments">
                                     <div class="commentsPeople">
-                                        <input type="text" placeholder="Full Name">
-                                        <input type="text" placeholder="Email Address">
-                                        <input type="text" placeholder="Subject">
+                                        <input type="text" placeholder="Full Name" id="fullName">
+                                        <input type="text" placeholder="Email Address" id="emailAddress">
+                                        <input type="text" placeholder="Subject" id="subject">
                                     </div>
                                     <div class="commentsMessage">
-                                        <textarea name="message" rows="7" placeholder="Message"></textarea>
+                                        <textarea name="message" rows="7" placeholder="Message" id="message"></textarea>
                                     </div>
                                 </div>
                                 <div>
-                                    <div class="sendMessage">Send Message</div>
+                                    <div class="sendMessage" id="sendMessage">Send Message</div>
                                 </div>
                             </div>
                         </div>
@@ -288,7 +291,7 @@
                         <button class="portfolioCloseButton">
                             <i class="fa-solid fa-xmark"></i>
                         </button>
-                        <div class='btnBox'>
+                        <div class='btnBox' id="gameOfLifeChangeDialogBtn">
                             <div class="leftBtn">
                                 <i class="fa-solid fa-chevron-left"></i>
                             </div>
@@ -297,8 +300,8 @@
                             </div>
                         </div>
                         <h2 class="dialogTopic">GAME OF LIFE</h2>
-                        <div class="gameOfLifeContent">
-                            <div class="portfolioPicture">
+                        <div class="gameOfLifeContent" >
+                            <div class="portfolioPicture" id="gameOfLifeAllPicture">
                                 <img class="pictureActive" src="./picture/gameOfLife.jpg" id="gameOfLifePicture1">
                                 <img class="pictureNotActive" src="./picture/gameOfLifePage.jpg"
                                     id="gameOfLifePicture2">
@@ -306,6 +309,7 @@
                                     <div class="chooseBox chooseBoxActive" id="gameOfLifeChooseBox1"></div>
                                     <div class="chooseBox" id="gameOfLifeChooseBox2"></div>
                                 </div>
+                                <div class="zoomBig" id="gameOfLifeZoomBig"><i class="fa-solid fa-expand"></i></div>
                             </div>
                             <div class="portfolioDescription">
                                 <div class="descriptionContent">
@@ -340,7 +344,7 @@
                         <button class="portfolioCloseButton">
                             <i class="fa-solid fa-xmark"></i>
                         </button>
-                        <div class='btnBox'>
+                        <div class='btnBox' id="caloriesWebChangeDialogBtn">
                             <div class="leftBtn">
                                 <i class="fa-solid fa-chevron-left"></i>
                             </div>
@@ -350,7 +354,7 @@
                         </div>
                         <h2 class="dialogTopic">CALORIES WEBSITE</h2>
                         <div class="gameOfLifeContent">
-                            <div class="portfolioPicture">
+                            <div class="portfolioPicture" id="caloriesWebAllPicture">
                                 <img class="pictureActive" src="./picture/carloriesWebMainPage.jpg"
                                     id="carloriesWebPicture1">
                                 <img class="pictureNotActive" src="./picture/carloriesWebProfile.jpg"
@@ -365,6 +369,7 @@
                                     <div class="chooseBox" id="carloriesWebChooseBox3"></div>
                                     <div class="chooseBox" id="carloriesWebChooseBox4"></div>
                                 </div>
+                                <div class="zoomBig" id="caloriesWebZoomBig"><i class="fa-solid fa-expand"></i></div>
                             </div>
                             <div class="portfolioDescription">
                                 <div class="descriptionContent">
@@ -409,7 +414,7 @@
                         <button class="portfolioCloseButton">
                             <i class="fa-solid fa-xmark"></i>
                         </button>
-                        <div class='btnBox'>
+                        <div class='btnBox' id="aiProjectChangeDialogBtn">
                             <div class="leftBtn">
                                 <i class="fa-solid fa-chevron-left"></i>
                             </div>
@@ -419,7 +424,8 @@
                         </div>
                         <h2 class="dialogTopic">AI PROJECT</h2>
                         <div class="gameOfLifeContent">
-                            <div class="portfolioPicture">
+                            <div class="portfolioPicture" id="aiProjectAllPicture">
+                                <div class="zoomBig" id="aiProjectZoomBig"><i class="fa-solid fa-expand"></i></div>
                                 <img class="pictureActive" src="./picture/aiProjectMainPage.jpg" id="aiProjectPicture1">
                                 <img class="pictureNotActive" src="./picture/aiProjectCoding.jpg"
                                     id="aiProjectPicture2">
@@ -473,7 +479,7 @@
                         <button class="portfolioCloseButton">
                             <i class="fa-solid fa-xmark"></i>
                         </button>
-                        <div class='btnBox'>
+                        <div class='btnBox' id="caloriesAppChangeDialogBtn">
                             <div class="leftBtn">
                                 <i class="fa-solid fa-chevron-left"></i>
                             </div>
@@ -483,7 +489,7 @@
                         </div>
                         <h2 class="dialogTopic">Calories App</h2>
                         <div class="gameOfLifeContent">
-                            <div class="portfolioPicture caloriesAppPicture">
+                            <div class="portfolioPicture caloriesAppPicture" id="caloriesAppAllPicture">
                                 <img class="pictureActive" src="./picture/carloriesAppMainPage.jpg" id="caloriesAppPicture1">
                                 <img class="pictureNotActive" src="./picture/carloriesAppPage.jpg"id="caloriesAppPicture2">
                                 <img class="pictureNotActive" src="./picture/carloriesAppDetail.jpg" id="caloriesAppPicture3">
@@ -496,6 +502,7 @@
                                     <div class="chooseBox" id="caloriesAppChooseBox4"></div>
                                     <div class="chooseBox" id="caloriesAppChooseBox5"></div>
                                 </div>
+                                <div class="zoomBig" id="caloriesAppZoomBig"><i class="fa-solid fa-expand"></i></div>
                             </div>
                             <div class="portfolioDescription">
                                 <div class="descriptionContent">
@@ -507,6 +514,10 @@
                                     <p class="descriptionDetail">
                                         <i class="fa-solid fa-calendar-days"></i>
                                         25 may, 2022
+                                    </p>
+                                    <p class="descriptionDetail">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <a href="https://resilient-selkie-75cc24.netlify.app">https://resilient-selkie-75cc24.netlify.app</a>
                                     </p>
                                     <p class="descriptionMain">The purpose of this app is for people who 
                                         wants to become fitness or jacked to record 
