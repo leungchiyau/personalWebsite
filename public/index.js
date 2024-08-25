@@ -35,13 +35,10 @@ let myProjectCoverBox = document.querySelector('#myProjectCoverBox');
 let youtubeVideoCover = document.querySelector('#youtubeVideoCoverBox');
 let localVideoCover = document.querySelector('#localVideoCoverBox');
 let comingSoonCover = document.querySelector('#comingSoonCoverBox');
-// let coverBox = document.querySelectorAll('.coverBox');
 let gameOfLife = document.querySelector('#gameOfLife');
 let caloriesWeb = document.querySelector('#caloriesWeb');
 let aiProject = document.querySelector('#aiProject');
 let caloriesApp = document.querySelector('#caloriesApp');
-// let leftBtn = document.querySelectorAll('.leftBtn');
-// let rightBtn = document.querySelectorAll('.rightBtn');
 let gameOfLifePicture1 = document.querySelector('#gameOfLifePicture1');
 let gameOfLifePicture2 = document.querySelector('#gameOfLifePicture2');
 let gameOfLifeChooseBox1 = document.querySelector('#gameOfLifeChooseBox1');
@@ -142,10 +139,6 @@ downloadCVButton.addEventListener('mouseout', (e) => {
     downloadCVButton.className = 'downloadCVButton'
 })
 
-// rightBtn.addEventListener('click', (e) => {
-//     console.log('click')
-// })
-
 function hoverSocial(socialItem) {
     socialItem.addEventListener('mouseover', (e) => {
         socialItem.className = "hoverSocialLink"
@@ -244,18 +237,15 @@ function portfolioPageBoxEffect(box, coverBox) {
             coverBox.className = 'coverBox'
             coverBox.classList.add('upInBox')
         }
-
-        if (y <= Math.floor(layer.top) || y <= Math.floor(layer.top + 5)) {
+        else if (y <= Math.floor(layer.top) || y <= Math.floor(layer.top + 5)) {
             coverBox.className = 'coverBox'
             coverBox.classList.add('downInBox')
         }
-
-        if (x <= Math.floor(layer.left) || x <= Math.floor(layer.left + 5)) {
+        else if (x <= Math.floor(layer.left) || x <= Math.floor(layer.left + 5)) {
             coverBox.className = 'coverBox'
             coverBox.classList.add('leftInBox')
         }
-
-        if (x >= Math.floor(layer.right) || x >= Math.floor(layer.right - 5)) {
+        else if (x >= Math.floor(layer.right) || x >= Math.floor(layer.right - 5)) {
             coverBox.className = 'coverBox'
             coverBox.classList.add('rightInBox')
         }
@@ -324,7 +314,7 @@ function choosePictureEffect(picture, chooseBox, num, pictureArrays, chooseBoxAr
             pictureArrays[number - 1].className = 'pictureMovingActive'
             pictureArrays[number - 1].classList.add('pictureActiveMoveRightOut')
             let filterArray = pictureArrays.filter(pictureArray => pictureArray !== picture && pictureArray !== pictureArrays[number - 1])
-            if (filterArray !== []) {
+            if (filterArray.length != 0) {
                 for (let array of filterArray) {
                     array.className = 'pictureNotActive'
                 }

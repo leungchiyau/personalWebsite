@@ -268,6 +268,10 @@ body {
     padding: 0;
 }
 
+::-webkit-scrollbar {
+    width: 0;
+  }
+
 .backgroundImage {
     height: 100vh;
     overflow: hidden;
@@ -415,10 +419,10 @@ header {
     right: 0;
     border-radius: 32px;
     box-sizing: content-box;
+    border: solid 0.5px gray;
     display: inline-flex;
     flex-wrap: wrap;
     align-items: center;
-    overflow: scroll;
 }
 
 .introBox,
@@ -669,7 +673,6 @@ header {
     font-size: 300%;
     color: white;
     text-align: center;
-    margin-top: 5vh;
 }
 
 
@@ -1388,7 +1391,7 @@ header {
 }
 
 .gameOfLifeContent div img {
-    height: 100%;
+    height: auto;
     width: 100%;
 }
 
